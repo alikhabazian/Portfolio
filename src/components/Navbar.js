@@ -3,9 +3,10 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
+import avatar from  "../Assets/avatar2.png";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import {Link, Route} from "react-router-dom";
+import {CgGitBranch, CgGitFork} from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
@@ -15,6 +16,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import Home from "./Home/Home";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,9 +40,15 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand>
+        {/*<Navbar.Brand href="/" className="d-flex">*/}
+          <Nav.Item>
+            <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <AiOutlineHome style={{ marginBottom: "2px", fontSize: "24px",color: "white" }} />
+            </Nav.Link>
+          </Nav.Item>
+          {/*<Home />*/}
+          {/*<img src={avatar} className="img-fluid logo" alt="brand" />*/}
+        {/*</Navbar.Brand>*/}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -53,11 +61,11 @@ function NavBar() {
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
-            </Nav.Item>
+            {/*<Nav.Item>*/}
+            {/*  <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>*/}
+            {/*    <AiOutlineHome style={{ marginBottom: "2px" }} /> Home*/}
+            {/*  </Nav.Link>*/}
+            {/*</Nav.Item>*/}
 
             <Nav.Item>
               <Nav.Link
@@ -92,19 +100,19 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
+            {/*<Nav.Item>*/}
+            {/*  <Nav.Link*/}
+            {/*    href="https://soumyajitblogs.vercel.app/"*/}
+            {/*    target="_blank"*/}
+            {/*    rel="noreferrer"*/}
+            {/*  >*/}
+            {/*    <ImBlog style={{ marginBottom: "2px" }} /> Blogs*/}
+            {/*  </Nav.Link>*/}
+            {/*</Nav.Item>*/}
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://github.com/Alikhabazian/Portfolio"
                 target="_blank"
                 className="fork-btn-inner"
               >
