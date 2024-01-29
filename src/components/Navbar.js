@@ -12,7 +12,7 @@ import {
   AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
-  AiOutlineUser,
+  AiOutlineUser, AiOutlineLike, AiFillHeart, AiOutlineHeart,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -87,6 +87,19 @@ function NavBar() {
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                  as={Link}
+                  to="/donate"
+                  onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineHeart
+                    style={{ marginBottom: "2px" }}
+                />{" "}
+                Donate
               </Nav.Link>
             </Nav.Item>
 

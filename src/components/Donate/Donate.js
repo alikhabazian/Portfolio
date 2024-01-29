@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ProjectCard from "./ProjectCards";
+import ProjectCard from "./DonateCards";
 import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
@@ -10,27 +10,36 @@ import secret from "../../Assets/Projects/SecretAdolf.PNG";
 import bilit from "../../Assets/Projects/BilitiBot.PNG";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import DonateCards from "./DonateCards";
 
-function Projects() {
+// bitcoin bc1qpp5vz7c7thx0g9rc5v36s7cq642zfwkkux687r
+// etherum 0x1FbdFC3C41c65C8d2E578f0c0fFa52D0eDbcBA3F
+// litcoin ltc1qppsfr3r0zd98k0ed53nzn69ak76rvkmr5m379y
+// doge DKzjDgrb39SDfXW7dAh41GMEy95AeGFh8U
+function Donate() {
+  const bitcoin ="bc1qpp5vz7c7thx0g9rc5v36s7cq642zfwkkux687r";
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          Welcome to My Personal  <strong className="purple">Donate Page </strong>!
         </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
+        <h5 style={{ color: "white" }}>
+          I appreciate your interest in supporting my endeavors. Your generosity empowers me to pursue my goals and passions.<br/>
+          Your contribution, regardless of its size, is a meaningful investment in my journey.
+        </h5>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={secret}
+            <DonateCards
+              imgPath={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+bitcoin}
               isBlog={false}
-              title="Secret Hitler"
-              description="Secret hitler Board game desgined by flutter framework"
-              ghLink="https://github.com/alikhabazian/SecretHitler-Flutter"
-              demoLink="https://secretadolf.ir"
+              title="Bitcoin"
+              description="
+It's nearly improbable for individuals to send it to me as a donation but It is first coin has been invented."
+              walletAddress="bc1qpp5vz7c7thx0g9rc5v36s7cq642zfwkkux687r"
+                // ghLink="https://github.com/alikhabazian/SecretHitler-Flutter"
+              // demoLink="https://secretadolf.ir"
             />
           </Col>
 
@@ -95,4 +104,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Donate;
