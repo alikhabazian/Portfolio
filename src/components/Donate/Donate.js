@@ -18,6 +18,8 @@ import DonateCards from "./DonateCards";
 // doge DKzjDgrb39SDfXW7dAh41GMEy95AeGFh8U
 function Donate() {
   const bitcoin ="bc1qpp5vz7c7thx0g9rc5v36s7cq642zfwkkux687r";
+  const eth = "0x1FbdFC3C41c65C8d2E578f0c0fFa52D0eDbcBA3F";
+  
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -45,12 +47,24 @@ It's nearly improbable for individuals to send it to me as a donation but It is 
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bilit}
+              imgPath={"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+eth}
               isBlog={false}
-              title="BilitiBot"
-              description="It's an telegram bot that systematically searches Snapptrip and Alibaba for tickets available at specific times and automatically makes the purchase."
-              ghLink="https://github.com/alikhabazian/BilitiBot"
-              demoLink="https://t.me/Ticket_searching_bot"
+              title="Ethereum USDC"
+              description="It's Ethereum USDC"
+              walletAddress={eth}
+              
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={"https://hamibash.com/assets/img/logo.svg"}
+              isBlog={false}
+              title="Hami bash"
+              description="It's iranian page to donate rial coin :)"
+              demoLink="https://hamibash.com/secrethitler"
+              walletAddress={"https://hamibash.com/secrethitler"}
+            
+              
             />
           </Col>
 

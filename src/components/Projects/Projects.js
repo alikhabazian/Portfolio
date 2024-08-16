@@ -10,6 +10,7 @@ import secret from "../../Assets/Projects/SecretAdolf.PNG";
 import bilit from "../../Assets/Projects/BilitiBot.PNG";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
+import pentago from "../../Assets/Projects/Pentago.png";
 
 function Projects() {
   return (
@@ -42,6 +43,15 @@ function Projects() {
               description="It's an telegram bot that systematically searches Snapptrip and Alibaba for tickets available at specific times and automatically makes the purchase."
               ghLink="https://github.com/alikhabazian/BilitiBot"
               demoLink="https://t.me/Ticket_searching_bot"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={pentago}
+              isBlog={false}
+              title="Pentago Board game"
+              description="It is a small nostalgic board game for teaching flutter on youtube"
+              ghLink="https://github.com/alikhabazian/pentago_flutter_app"
             />
           </Col>
 
